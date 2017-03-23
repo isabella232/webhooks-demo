@@ -1,0 +1,16 @@
+<h1>Verify Your Address</h1>
+
+<p>Verification Status: <%= current_user.verified %></p>
+
+<hr>
+
+<% if !current_user.verified? %>
+
+  <h1>Submit Your Verification Code</h1>
+
+  <%= form_tag("/verify", method: "post") do %>
+    <%= text_field_tag("verification_code", nil, required: true) %>
+    <%= submit_tag("Verify") %>
+  <% end %>
+
+<% end %>

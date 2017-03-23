@@ -1,0 +1,70 @@
+<h2>Sign up</h2>
+
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+  <%= devise_error_messages! %>
+
+
+  <div class="field">
+    <%= f.label :email %><br />
+    <%= f.email_field :email, autofocus: true %>
+  </div>
+
+  <div class="field">
+    <%= f.label :first_name %><br />
+    <%= f.text_field :first_name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :last_name %><br />
+    <%= f.text_field :last_name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :address_line1 %><br />
+    <%= f.text_field :address_line1 %>
+  </div>
+
+  <div class="field">
+    <%= f.label :address_line2 %><br />
+    <%= f.text_field :address_line2 %>
+  </div>
+
+  <div class="field">
+    <%= f.label :address_city %><br />
+    <%= f.text_field :address_city %>
+  </div>
+
+  <div class="field">
+    <%= f.label :address_state %><br />
+    <%= f.text_field :address_state, maxlength: 2, size: 4  %>
+  </div>
+
+  <div class="field">
+    <%= f.label :address_zip %><br />
+    <%= f.text_field :address_zip, maxlength: 11, size: 15 %>
+  </div>
+
+  <div class="field">
+    <%= f.label :address_country %><br />
+    <%= f.text_field :address_country, maxlength: 2, size: 4 %>
+  </div>
+
+  <div class="field">
+    <%= f.label :password %>
+    <% if @minimum_password_length %>
+    <em>(<%= @minimum_password_length %> characters minimum)</em>
+    <% end %><br />
+    <%= f.password_field :password, autocomplete: "off" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :password_confirmation %><br />
+    <%= f.password_field :password_confirmation, autocomplete: "off" %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "Sign up" %>
+  </div>
+<% end %>
+
+<%= render "devise/shared/links" %>
