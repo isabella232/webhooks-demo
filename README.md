@@ -1,3 +1,5 @@
+# NOTE: This example was created on an outdated version of the Lob API. Please see the latest [Lob documentation](https://lob.com/docs) for the most up to date implementation.
+
 # README
 
 ### Using Lob Webhooks to Send Delivery Notifications in Rails
